@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="560" viewBox="0 0 1280 560" role="img" aria-label="WireLens: in-app network inspector for Android">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1E1250"/><stop offset="0.55" stop-color="#5B3DF5"/><stop offset="1" stop-color="#0EA5E9"/></linearGradient>
+<linearGradient id="card" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity="0.22"/><stop offset="1" stop-color="#ffffff" stop-opacity="0.08"/></linearGradient>
+</defs>
+<rect width="1280" height="560" rx="28" fill="url(#bg)"/>
+<g fill="none" stroke="#ffffff">
+<circle cx="1180" cy="60" r="120" stroke-opacity="0.10" stroke-width="2"/>
+<circle cx="1180" cy="60" r="220" stroke-opacity="0.07" stroke-width="2"/>
+<circle cx="1180" cy="60" r="320" stroke-opacity="0.05" stroke-width="2"/>
+</g>
+<circle cx="60" cy="560" r="240" fill="#ffffff" fill-opacity="0.05"/>
+<g transform="translate(80 150)">
+<rect width="64" height="64" rx="18" fill="#ffffff" fill-opacity="0.2"/>
+<path transform="translate(12 12) scale(1.667)" fill="#ffffff" d="M16,17.01V10h-2v7.01h-3L15,21l4,-3.99h-3zM9,3L5,6.99h3V14h2V6.99h3L9,3z"/>
+<text x="0" y="148" font-family="Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="84" font-weight="800" fill="#ffffff" letter-spacing="-2">WireLens</text>
+<text x="2" y="200" font-family="Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="28" font-weight="500" fill="#ffffff" fill-opacity="0.88">In-app network inspector for Android</text>
+<g font-family="Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">
+<rect x="0" y="236" width="104" height="36" rx="18" fill="#ffffff" fill-opacity="0.18"/><text x="52" y="260" text-anchor="middle">OkHttp</text>
+<rect x="116" y="236" width="170" height="36" rx="18" fill="#ffffff" fill-opacity="0.18"/><text x="201" y="260" text-anchor="middle">Jetpack Compose</text>
+<rect x="298" y="236" width="86" height="36" rx="18" fill="#ffffff" fill-opacity="0.18"/><text x="341" y="260" text-anchor="middle">cURL</text>
+<rect x="396" y="236" width="132" height="36" rx="18" fill="#ffffff" fill-opacity="0.18"/><text x="462" y="260" text-anchor="middle">Redaction</text>
+</g>
+</g>
+<rect x="748" y="96" width="448" height="444" rx="30" fill="url(#card)" stroke="#ffffff" stroke-opacity="0.25"/>
+<g font-family="Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif" fill="#ffffff">
+<text x="776" y="140" font-size="22" font-weight="700">Requests</text>
+<text x="776" y="168" font-size="14" fill-opacity="0.75">11 calls · 3 errors · 48 KB · avg 1.28 s</text>
+</g>
+<g transform="translate(772 196)">
+<rect width="400" height="52" rx="14" fill="#ffffff"/>
+<rect width="5" height="52" rx="2.5" fill="#10B981"/>
+<rect x="18" y="14" width="44" height="24" rx="7" fill="#3B82F6" fill-opacity="0.15"/>
+<text x="40.0" y="31" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" font-weight="700" fill="#3B82F6">GET</text>
+<text x="74" y="31" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14" font-weight="600" fill="#15131F">/v2/products</text>
+<text x="300" y="31" text-anchor="end" font-family="Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12" fill="#63607A">84 ms</text>
+<rect x="316" y="14" width="66" height="24" rx="12" fill="#10B981" fill-opacity="0.15"/>
+<circle cx="332" cy="26" r="4" fill="#10B981"/>
+<text x="356" y="31" text-anchor="middle" font-family="Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="13" font-weight="700" fill="#10B981">200</text>
+</g><g transform="translate(772 258)">
+<rect width="400" height="52" rx="14" fill="#ffffff"/>
+<rect width="5" height="52" rx="2.5" fill="#10B981"/>
+<rect x="18" y="14" width="54" height="24" rx="7" fill="#10B981" fill-opacity="0.15"/>
+<text x="45.0" y="31" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" font-weight="700" fill="#10B981">POST</text>
+<text x="84" y="31" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14" font-weight="600" fill="#15131F">/v1/auth/login</text>
+<text x="300" y="31" text-anchor="end" font-family="Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12" fill="#63607A">342 ms</text>
+<rect x="316" y="14" width="66" height="24" rx="12" fill="#10B981" fill-opacity="0.15"/>
+<circle cx="332" cy="26" r="4" fill="#10B981"/>
+<text x="356" y="31" text-anchor="middle" font-family="Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="13" font-weight="700" fill="#10B981">200</text>
+</g><g transform="translate(772 320)">
+<rect width="400" height="52" rx="14" fill="#ffffff"/>
+<rect width="5" height="52" rx="2.5" fill="#EF4444"/>
+<rect x="18" y="14" width="54" height="24" rx="7" fill="#10B981" fill-opacity="0.15"/>
+<text x="45.0" y="31" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" font-weight="700" fill="#10B981">POST</text>
+<text x="84" y="31" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14" font-weight="600" fill="#15131F">/v2/checkout</text>
+<text x="300" y="31" text-anchor="end" font-family="Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12" fill="#63607A">1.84 s</text>
+<rect x="316" y="14" width="66" height="24" rx="12" fill="#EF4444" fill-opacity="0.15"/>
+<circle cx="332" cy="26" r="4" fill="#EF4444"/>
+<text x="356" y="31" text-anchor="middle" font-family="Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="13" font-weight="700" fill="#EF4444">500</text>
+</g><g transform="translate(772 382)">
+<rect width="400" height="52" rx="14" fill="#ffffff"/>
+<rect width="5" height="52" rx="2.5" fill="#F59E0B"/>
+<rect x="18" y="14" width="74" height="24" rx="7" fill="#EF4444" fill-opacity="0.15"/>
+<text x="55.0" y="31" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" font-weight="700" fill="#EF4444">DELETE</text>
+<text x="104" y="31" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14" font-weight="600" fill="#15131F">/v2/cart/coupons</text>
+<text x="300" y="31" text-anchor="end" font-family="Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12" fill="#63607A">73 ms</text>
+<rect x="316" y="14" width="66" height="24" rx="12" fill="#F59E0B" fill-opacity="0.15"/>
+<circle cx="332" cy="26" r="4" fill="#F59E0B"/>
+<text x="356" y="31" text-anchor="middle" font-family="Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="13" font-weight="700" fill="#F59E0B">404</text>
+</g><g transform="translate(772 444)">
+<rect width="400" height="52" rx="14" fill="#ffffff"/>
+<rect width="5" height="52" rx="2.5" fill="#10B981"/>
+<rect x="18" y="14" width="64" height="24" rx="7" fill="#A855F7" fill-opacity="0.15"/>
+<text x="50.0" y="31" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" font-weight="700" fill="#A855F7">PATCH</text>
+<text x="94" y="31" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14" font-weight="600" fill="#15131F">/v2/me/preferences</text>
+<text x="300" y="31" text-anchor="end" font-family="Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12" fill="#63607A">97 ms</text>
+<rect x="316" y="14" width="66" height="24" rx="12" fill="#10B981" fill-opacity="0.15"/>
+<circle cx="332" cy="26" r="4" fill="#10B981"/>
+<text x="356" y="31" text-anchor="middle" font-family="Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="13" font-weight="700" fill="#10B981">200</text>
+</g>
+</svg>
