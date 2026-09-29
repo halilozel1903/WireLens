@@ -201,22 +201,29 @@ internal fun CodeBlock(text: String, json: Boolean, modifier: Modifier = Modifie
             .then(if (colors.isDark) Modifier.border(1.dp, Color(0xFF2A2738), RoundedCornerShape(14.dp)) else Modifier)
             .padding(vertical = 12.dp),
     ) {
-        Text(
-            (1..shown.second).joinToString("\n"),
-            modifier = Modifier.padding(start = 10.dp, end = 10.dp),
-            color = colors.codeGutter,
-            fontFamily = FontFamily.Monospace,
-            fontSize = 12.sp,
-            lineHeight = 18.sp,
-        )
-        Box(Modifier.weight(1f).horizontalScroll(rememberScrollState()).padding(end = 14.dp)) {
+        if (!wrap) {
+            Text(
+                (1..shown.second).joinToString("\n"),
+                modifier = Modifier.padding(start = 10.dp, end = 10.dp),
+                color = colors.codeGutter,
+                fontFamily = FontFamily.Monospace,
+                fontSize = 12.sp,
+                lineHeight = 18.sp,
+            )
+        }
+        Box(
+            Modifier
+                .weight(1f)
+                .then(if (wrap) Modifier.padding(start = 14.dp) else Modifier.horizontalScroll(rememberScrollState()))
+                .padding(end = 14.dp),
+        ) {
             Text(
                 highlighted,
                 color = colors.codeText,
                 fontFamily = FontFamily.Monospace,
                 fontSize = 12.sp,
                 lineHeight = 18.sp,
-                softWrap = false,
+                softWrap = wrap,
             )
         }
     }

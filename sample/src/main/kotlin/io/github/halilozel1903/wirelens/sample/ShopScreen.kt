@@ -9,6 +9,9 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.asPaddingValues
+import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -67,11 +70,11 @@ fun ShopScreen() {
     LazyVerticalGrid(
         columns = GridCells.Fixed(2),
         modifier = Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background),
-        contentPadding = PaddingValues(bottom = 120.dp),
+        contentPadding = WindowInsets.navigationBars.asPaddingValues().let { PaddingValues(bottom = it.calculateBottomPadding() + 24.dp) },
         horizontalArrangement = Arrangement.spacedBy(12.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp),
     ) {
-        item(span = { GridItemSpan(2) }) { Header() }
+        item(span = { GridItemSpan(2) }) { Header(onOpen = { WireLens.open(context) }) }
         item(span = { GridItemSpan(2) }) {
             Text(
                 "Send real requests",
@@ -92,17 +95,20 @@ fun ShopScreen() {
         item(span = { GridItemSpan(2) }) {
             Column(Modifier.padding(horizontal = 16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
                 last?.let { Text("Last result  ·  $it", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 13.sp) }
-                WideButton("Add sample traffic (offline)") {
-                    SampleTraffic.records().reversed().forEach { WireLens.store.put(it.copy(id = WireLens.store.newId())) }
+                // The right end stays free for the floating WireLens bubble.
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    WideButton("Add sample traffic", Modifier.weight(1f)) {
+                        SampleTraffic.records().reversed().forEach { WireLens.store.put(it.copy(id = WireLens.store.newId())) }
+                    }
+                    Spacer(Modifier.width(84.dp))
                 }
-                WideButton("Open WireLens") { WireLens.open(context) }
             }
         }
     }
 }
 
 @Composable
-private fun Header() {
+private fun Header(onOpen: () -> Unit) {
     Box(
         Modifier
             .fillMaxWidth()
@@ -119,6 +125,18 @@ private fun Header() {
                 color = Color.White.copy(alpha = 0.8f),
                 fontSize = 14.sp,
                 lineHeight = 20.sp,
+            )
+            Spacer(Modifier.height(16.dp))
+            Text(
+                "Open WireLens",
+                modifier = Modifier
+                    .clip(CircleShape)
+                    .background(Color.White)
+                    .clickable(onClick = onOpen)
+                    .padding(horizontal = 18.dp, vertical = 10.dp),
+                color = Color(0xFF312E81),
+                fontWeight = FontWeight.Bold,
+                fontSize = 14.sp,
             )
         }
     }
@@ -155,10 +173,9 @@ private fun CallCard(call: DemoCall, modifier: Modifier = Modifier, onClick: () 
 }
 
 @Composable
-private fun WideButton(text: String, onClick: () -> Unit) {
+private fun WideButton(text: String, modifier: Modifier = Modifier, onClick: () -> Unit) {
     Box(
-        Modifier
-            .fillMaxWidth()
+        modifier
             .clip(RoundedCornerShape(16.dp))
             .background(MaterialTheme.colorScheme.primaryContainer)
             .clickable(onClick = onClick)
